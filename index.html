@@ -113,12 +113,13 @@ db.Employee.getIndexes()
 
 <h2>4. Redis API (Python) for Data Storage and Caching</h2>
 <pre><code>
+    
 import redis
-
 r = redis.Redis(host="localhost", port=6379, db=0)
 r.set('name', 'ash')
 value = r.get('name')
 print("Value from Redis:", value.decode())
+    
 </code></pre>
 
 <pre><code>
