@@ -166,5 +166,39 @@ if __name__ == '__main__':
 
 <code>http://127.0.0.1:5000/home/10</code>
 
+<h2>7.Casandra </h2>
+<pre><code>
+-- Create Keyspace
+CREATE KEYSPACE University WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3};
+
+-- Create Table
+CREATE TABLE University.Student (
+    rollno int,
+    name text,
+    dept text,
+    PRIMARY KEY (rollno)
+);
+
+-- Insert Data
+INSERT INTO University.Student (rollno, name, dept) VALUES (1, 'vinita', 'cs');
+INSERT INTO University.Student (rollno, name, dept) VALUES (2, 'anita', 'it');
+
+-- Retrieve Data
+SELECT * FROM University.Student;
+
+-- Update Data
+UPDATE University.Student SET dept = 'it' WHERE rollno = 2;
+
+-- Retrieve Updated Data
+SELECT * FROM University.Student;
+
+-- Delete Data
+DELETE FROM University.Student WHERE rollno = 1;
+
+-- Retrieve After Deletion
+SELECT * FROM University.Student;
+
+</code></pre>    
+
 </body>
 </html>
